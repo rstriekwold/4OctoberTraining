@@ -63,4 +63,4 @@ Pin All Extensions to the Menu
     #     ${result}=                   QVision.Is Icon                      pin
     # END         
     
-    # Log                        All extensions have been enabled
+    Log                        All extensions have been enabled
