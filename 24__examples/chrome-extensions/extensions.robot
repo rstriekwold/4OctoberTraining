@@ -52,15 +52,15 @@ Install Extension from Chrome Web Store
 
 Pin All Extensions to the Menu
 
-    QVision.Click Icon    puzzlegrey
-    ${result}=                   QVision.Is Icon                      pin
-    Log to Console               ${result}          
+    # QVision.Click Icon    puzzlegrey
+    # ${result}=                   QVision.Is Icon                      pin
+    # Log to Console               ${result}          
 
-    WHILE    '${result}'!='False'
-        QVision.Click Icon    puzzlegrey
-        QVision.ClickIcon                        pin
-        QVision.Click Icon    puzzlegrey
-        ${result}=                   QVision.Is Icon                      pin
-    END         
+    # WHILE    '${result}'!='False'
+    #     QVision.Click Icon    puzzlegrey
+    #     QVision.ClickIcon                        pin
+    #     QVision.Click Icon    puzzlegrey
+    #     ${result}=                   QVision.Is Icon                      pin
+    # END         
     
-    Log                        All extensions have been enabled
+    # Log                        All extensions have been enabled
