@@ -28,6 +28,11 @@ Install Chrome Extension Salesforce inspector
     [Documentation]    xPath plugin to auto generate, write and verify xpath & cssSelector.
     Install Extension from Chrome Web Store    Salesforce inspector    Salesforce inspector
 
+Install Chrome Extension Lighthouse
+    [Documentation]    xPath plugin to auto generate, write and verify xpath & cssSelector.
+    Install Extension from Chrome Web Store    Lighthouse    Lighthouse
+
+
 Install Extension from Chrome Web Store
     [Arguments]     ${search_query}    ${result_title}    ${unique_anchor}=${EMPTY}    
     Set Library Search Order          QForce      QVision
@@ -43,6 +48,7 @@ Install Extension from Chrome Web Store
     Close Window
     GoTo              chrome://version
     ClickText         OS
+    Pin All Extensions to the Menu
 
 Pin All Extensions to the Menu
 
