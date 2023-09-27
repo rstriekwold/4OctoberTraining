@@ -4,7 +4,7 @@ Library               OperatingSystem
 Library               Process
 Library                QVision
 Library            Collections
-Suite Setup           Run Keywords   Start Browser     Install Chrome Extension SelectorsHub        Install Chrome Extension Salesforce inspector
+Suite Setup           Run Keywords   Start Browser     Install Chrome Extension SelectorsHub        Install Chrome Extension Salesforce inspector    Install Chrome Extension Lighthouse
 Suite Teardown        CloseAllBrowsers
 
 *** Variables ***
