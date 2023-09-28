@@ -45,6 +45,7 @@ Install Extension from Chrome Web Store
     Run Keyword If              '${unique_anchor}'=='${EMPTY}'    Click Text                ${result_title}    
     Run Keyword If              '${unique_anchor}'!='${EMPTY}'    Click Text                ${result_title}        anchor=${unique_anchor}    
     Click Text                Add to Chrome
+    Sleep                     3s
     QVision.Click Text        Add extension
     Close Window
     GoTo              chrome://version
