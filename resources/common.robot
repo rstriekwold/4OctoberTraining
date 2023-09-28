@@ -99,7 +99,6 @@ Login As
 
 Home
     [Documentation]             Navigate to homepage, login if needed
-    LaunchApp                   Sales
     GoTo                        ${home_url}
     ${login_status} =           IsText                      To access this page, you have to log in to Salesforce.                  2
     Run Keyword If              ${login_status}             Login                   
