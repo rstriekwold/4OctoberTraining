@@ -125,6 +125,7 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
     Set Global Variable        ${home_url}                 ${login_url}/lightning/page/home
     Set Global Variable        ${username}                 ${sftrial_username}
     Set Global Variable        ${password}                 ${password}
+    Set Global Variable        ${mailinator_url}           ${mailinator_url}
     Log To Console             ${login_url}
     Log To Console             ${home_url}
     Log To Console             ${username}
