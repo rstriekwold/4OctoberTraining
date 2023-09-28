@@ -31,8 +31,8 @@ Exercise 4 - Do it for me! Create online mailbox
     Log to Console             ${email_address}
     ${url}=                    GetUrl
     Set Global Variable        ${mailinator_url}           ${url}
-    Log to Console             \n\n\n\n\n\nCOPY THIS LINK TO YOUR OWN BROWSER\n\n\n\n\n\n
-    Log to Console             \n\n\n\n\n\n${mailinator_url}\n\n\n\n\n\n 
+    Log to Console             \n\n\n\n\n\nCOPY THIS LINK TO YOUR OWN BROWSER\n\n
+    Log to Console             \n\n${mailinator_url}\n\n\n\n\n\n 
     Open Window
 
 
