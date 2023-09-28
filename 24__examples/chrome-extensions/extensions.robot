@@ -59,7 +59,8 @@ Pin All Extensions to the Menu
 
     WHILE    '${result}'!='False'
         QVision.Click Icon    puzzlegrey
-        QVision.ClickIcon                        pin                  delay=3s
+        Sleep                 3s
+        QVision.ClickIcon                        pin
         QVision.Click Icon    puzzlegrey
         ${result}=                   QVision.Is Icon                      pin
     END         
