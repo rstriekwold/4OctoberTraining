@@ -38,6 +38,7 @@ Install Extension from Chrome Web Store
     Set Library Search Order          QForce      QVision
     SwitchWindow      1                
     GoTo              chrome://extensions
+    Sleep             3s
     QVision.ClickText         Web Store
     SwitchWindow              NEW
     TypeText                  Search the store    ${search_query}\n
