@@ -52,6 +52,57 @@ Login
     #     ClickText               Verify
     # END
 
+Login and Verify Code
+    [Documentation]             Login to Salesforce instance
+    GoTo                        ${login_url}
+    TypeText                    Username                    ${username}                 delay=1
+    TypeText                    Password                    ${password}
+    ClickText                   Log In
+    
+
+       ${code_needed}=            IsText                      Verify Your Identity
+
+    IF                         '${code_needed}' == 'True'
+        Log to Console         Verify Identify Screen appeared, get email verification code and enter it
+        Switch Window          NEW
+        GoTo                   ${mailinator_url}
+        ${email_count}=        Get Text Count              Verify Your Identity
+        Log to Console         ${email_count}
+
+        IF                     '${email_count}' > '${0}'
+            Log to Console     I've found an existing mail, let's wait 180 sec for the new mail to arrive
+            Sleep              180
+        ELSE
+            ClickItemUntil     Verify Your Identity        GO                          timeout=180
+        END
+        Log Screenshot
+        ${email_body}=         Get Text                    gmail_quote                 tag=div
+        ${code} =              Get Regexp Matches          ${email_body}               Verification Code: (......)                    1
+        Switch Window          3
+        Type Text              Verification Code           ${code}
+        Log Screenshot
+        Click Text             Verify                      anchor=again
+    ELSE
+        Log to Console         Verify Identify Screen did not appear, continue set password
+    END
+
+        SwitchWindow                NEW
+    GoTo                        ${mailinator_url}
+
+    # Uncommment with Exercise 8 MFA
+
+    # MFA is only required for unknown devices or browsers, once verified it is not asked for. 
+    # To enforce MFA in your SF trial, Setup -> Identity -> Identity Verification -> Require MFA for all direct UI logins to your Salesforce org
+    
+    # ${MFA_needed}=              Run Keyword And Return Status                           Should Not Be Equal         ${None}         ${MY_SECRET}
+    # Log To Console              ${MFA_needed} # When given ${MFA_needed} is true, see Log to Console keyword result
+    
+    # IF                          ${MFA_needed}
+    #     ${mfa_code}=            GetOTP                      ${username}                 ${MY_SECRET}
+    #     TypeSecret              Verification Code           ${mfa_code}
+    #     ClickText               Verify
+    # END
+
 Login As
     [Documentation]       Login As different persona. User needs to be logged into Salesforce with Admin rights
     ...                   before calling this keyword to change persona.
