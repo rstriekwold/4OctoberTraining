@@ -1,4 +1,8 @@
 *** Settings ***
+Library                         QWeb
+Library                         QForce
+Library                         String
+Library                         Collections
 Suite Setup                    Open Browser                about:blank                 chrome
 Suite Teardown                 Close All Browsers
 
