@@ -35,6 +35,8 @@ Exercise 5 - Allowlist IPs at Setup Network Access
 
     Log                    ${NorthAmericaIPs}
     FOR                    ${IP}                       IN                @{NorthAmericaIPs}
+        Sleep              2s
+        Log Screenshot
         ${ip_already_configured}=                      IsText            ${IP}
         IF                 '${ip_already_configured}' == 'False'
             ClickText          New
@@ -48,6 +50,8 @@ Exercise 5 - Allowlist IPs at Setup Network Access
 
     Log                    ${EuropeIPs}
     FOR                    ${IP}                       IN                @{EuropeIPs}
+        Sleep              2s
+        Log Screenshot
         ${ip_already_configured}=                      IsText            ${IP}
         IF                 '${ip_already_configured}' == 'False'
             ClickText          New
@@ -62,6 +66,8 @@ Exercise 5 - Allowlist IPs at Setup Network Access
     Log                    ${AustraliaIPs}
     FOR                    ${IP}                       IN                @{AustraliaIPs}
         ${ip_already_configured}=                      IsText            ${IP}
+        Sleep              2s
+        Log Screenshot
         IF                 '${ip_already_configured}' == 'False'
             ClickText          New
             TypeText           Start IP Address            ${IP}
@@ -74,6 +80,8 @@ Exercise 5 - Allowlist IPs at Setup Network Access
 
     Log                    ${SingaporeIPs}
     FOR                    ${IP}                       IN                @{SingaporeIPs}
+        Sleep              2s
+        Log Screenshot
         ${ip_already_configured}=                      IsText            ${IP}
         IF                 '${ip_already_configured}' == 'False'
             ClickText          New
