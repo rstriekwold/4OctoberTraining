@@ -69,13 +69,11 @@ Login and Verify Code
         GoTo                   ${mailinator_url}
         ${email_count}=        Get Text Count              Verify your identity in Salesforce
         Log to Console         ${email_count}
-        ClickItem              Verify your identity in Salesforce                       delay=5s
-
-
+        ClickText              Verify your identity in Salesforce                       delay=5s
         Log Screenshot
-        ${email_body}=         Get Text                    gmail_quote                 tag=div
+        ${email_body}=         Get Text                    //body[@marginheight\='0']
         ${code} =              Get Regexp Matches          ${email_body}               Verification Code: (......)                    1
-        Switch Window          3
+        Switch Window          1
         Type Text              Verification Code           ${code}
         Log Screenshot
         Click Text             Verify                      anchor=again
