@@ -86,22 +86,7 @@ Login and Verify Code
         Log to Console         Verify Identify Screen did not appear, continue set password
     END
 
-        SwitchWindow                NEW
-    GoTo                        ${mailinator_url}
-
-    # Uncommment with Exercise 8 MFA
-
-    # MFA is only required for unknown devices or browsers, once verified it is not asked for. 
-    # To enforce MFA in your SF trial, Setup -> Identity -> Identity Verification -> Require MFA for all direct UI logins to your Salesforce org
-    
-    # ${MFA_needed}=              Run Keyword And Return Status                           Should Not Be Equal         ${None}         ${MY_SECRET}
-    # Log To Console              ${MFA_needed} # When given ${MFA_needed} is true, see Log to Console keyword result
-    
-    # IF                          ${MFA_needed}
-    #     ${mfa_code}=            GetOTP                      ${username}                 ${MY_SECRET}
-    #     TypeSecret              Verification Code           ${mfa_code}
-    #     ClickText               Verify
-    # END
+    SwitchWindow                1
 
 Login As
     [Documentation]       Login As different persona. User needs to be logged into Salesforce with Admin rights
