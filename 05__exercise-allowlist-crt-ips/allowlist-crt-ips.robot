@@ -1,6 +1,6 @@
 *** Settings ***
-Suite Setup                Setup Browser
-Suite Teardown             Close All Browser Sessions
+Suite Setup                    Open Browser                about:blank                 chrome
+Suite Teardown                 Close All Browsers
 
 *** Test Cases ***
 Exercise 5 - Allowlist IPs at Setup Network Access
