@@ -64,16 +64,16 @@ Login and Verify Code
 
     IF                         '${code_needed}' == 'True'
         Log to Console         Verify Identify Screen appeared, get email verification code and enter it
-        Switch Window          NEW
+        Open Window
         GoTo                   ${mailinator_url}
         ${email_count}=        Get Text Count              Verify Your Identity
         Log to Console         ${email_count}
 
         IF                     '${email_count}' > '${0}'
-            Log to Console     I've found an existing mail, let's wait 180 sec for the new mail to arrive
-            Sleep              180
+            Log to Console     I've found an existing mail, let's wait 30 sec for the new mail to arrive
+            Sleep              30
         ELSE
-            ClickItemUntil     Verify Your Identity        GO                          timeout=180
+            ClickItemUntil     Verify Your Identity        GO                          timeout=30
         END
         Log Screenshot
         ${email_body}=         Get Text                    gmail_quote                 tag=div
