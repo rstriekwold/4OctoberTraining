@@ -135,18 +135,18 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
     ClickText                  Log Out
 
 #Keep the live testing open with your mailinator mailbox! Open your own chrome browser on your laptop and login to your sf trail. Get the code form mailinator in live testing!!!!
-Exercise 4 - Do it for me! Login to the trail org to Verify Account if needed
-    Appstate                   Home
-    Log Screenshot
-    Log To Console             ${login_url}
-    Log To Console             ${home_url}
-    Log To Console             ${username}
-    Log To Console             ${password}
-    Log to Console             ${mailinator_url}
+# Exercise 4 - Do it for me! Login to the trail org to Verify Account if needed
+#     Appstate                   Home
+#     Log Screenshot
+#     Log To Console             ${login_url}
+#     Log To Console             ${home_url}
+#     Log To Console             ${username}
+#     Log To Console             ${password}
+#     Log to Console             ${mailinator_url}
 
 Exercise 5 - Allowlist IPs at Setup Network Access
     [tags]                 IPs
-    # Login and Verify Code    
+    Login and Verify Code    
 
     ClickText              Setup
     ClickText              Opens in a new tab
