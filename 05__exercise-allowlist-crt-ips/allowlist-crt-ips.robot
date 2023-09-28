@@ -6,7 +6,7 @@ Suite Teardown             Close All Browser Sessions
 *** Test Cases ***
 Exercise 5 - Allowlist IPs at Setup Network Access
     [tags]                 IPs
-    Appstate               Home
+    Login and Verify Code    
 
     ClickText              Setup
     ClickText              Opens in a new tab
