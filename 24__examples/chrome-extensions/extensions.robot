@@ -4,7 +4,7 @@ Library               OperatingSystem
 Library               Process
 Library                QVision
 Library            Collections
-Suite Setup           Run Keywords   Start Browser     #Install Chrome Extension SelectorsHub        Install Chrome Extension Salesforce inspector    Install Chrome Extension Lighthouse
+Suite Setup           Run Keywords   Start Browser     Install Chrome Extension SelectorsHub        Install Chrome Extension Salesforce inspector    Install Chrome Extension Lighthouse
 Suite Teardown        CloseAllBrowsers
 
 *** Variables ***
@@ -38,7 +38,7 @@ Install Extension from Chrome Web Store
     Set Library Search Order          QForce      QVision
     SwitchWindow      1                
     GoTo              chrome://extensions
-    QVision.ClickText         Open Chrome Web Store
+    QVision.ClickText         Web Store
     SwitchWindow              NEW
     TypeText                  Search the store    ${search_query}\n
     Run Keyword If              '${unique_anchor}'=='${EMPTY}'    Click Text                ${result_title}    
