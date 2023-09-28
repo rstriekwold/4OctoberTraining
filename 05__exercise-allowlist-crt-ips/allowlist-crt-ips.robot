@@ -14,7 +14,6 @@ Exercise 5 - Allowlist IPs at Setup Network Access
         Login and Verify Code
     ELSE
         Login                  ${username}                        ${password}
-        Home
     END  
 
 
