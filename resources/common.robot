@@ -72,9 +72,10 @@ Login and Verify Code
         ClickText              Verify your identity in Salesforce                       delay=5s
         Log Screenshot
         ${email_body}=         Get Text                    //body[@marginheight\='0']
-        ${code} =              Get Regexp Matches          ${email_body}               Verification Code: (......)                    1
+        ${code} =              Get Regexp Matches          ${email_body}           Verification Code: (......)                    1
+        Log to Console         ${code}
         Switch Window          1
-        Type Text              Verification Code           ${code}
+        Type Text              Verification Code           ${code}[0]
         Log Screenshot
         Click Text             Verify                      anchor=again
     ELSE
