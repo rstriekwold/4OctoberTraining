@@ -58,9 +58,8 @@ Login and Verify Code
     TypeText                    Username                    ${username}                 delay=1
     TypeText                    Password                    ${password}
     ClickText                   Log In
-    
 
-       ${code_needed}=            IsText                      Verify Your Identity
+    ${code_needed}=            IsText                      Verify Your Identity
 
     IF                         '${code_needed}' == 'True'
         Log to Console         Verify Identify Screen appeared, get email verification code and enter it
