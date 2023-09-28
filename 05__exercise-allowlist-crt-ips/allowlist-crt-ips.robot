@@ -35,42 +35,54 @@ Exercise 5 - Allowlist IPs at Setup Network Access
 
     Log                    ${NorthAmericaIPs}
     FOR                    ${IP}                       IN                @{NorthAmericaIPs}
-        ClickText          New
-        TypeText           Start IP Address            ${IP}
-        TypeText           End IP Address              ${IP}
-        TypeText           Description                 North-America
-        ClickText          Save
-        VerifyText         ${IP}
+        ${ip_already_configured}=                      IsText            ${IP}
+        IF                 '${ip_already_configured}' == 'False'
+            ClickText          New
+            TypeText           Start IP Address            ${IP}
+            TypeText           End IP Address              ${IP}
+            TypeText           Description                 North-America
+            ClickText          Save
+            VerifyText         ${IP}
+        END
     END
 
     Log                    ${EuropeIPs}
     FOR                    ${IP}                       IN                @{EuropeIPs}
-        ClickText          New
-        TypeText           Start IP Address            ${IP}
-        TypeText           End IP Address              ${IP}
-        TypeText           Description                 Europe
-        ClickText          Save
-        VerifyText         ${IP}
+        ${ip_already_configured}=                      IsText            ${IP}
+        IF                 '${ip_already_configured}' == 'False'
+            ClickText          New
+            TypeText           Start IP Address            ${IP}
+            TypeText           End IP Address              ${IP}
+            TypeText           Description                 Europe
+            ClickText          Save
+            VerifyText         ${IP}
+        END
     END
 
     Log                    ${AustraliaIPs}
     FOR                    ${IP}                       IN                @{AustraliaIPs}
-        ClickText          New
-        TypeText           Start IP Address            ${IP}
-        TypeText           End IP Address              ${IP}
-        TypeText           Description                 Australia
-        ClickText          Save
-        VerifyText         ${IP}
+        ${ip_already_configured}=                      IsText            ${IP}
+        IF                 '${ip_already_configured}' == 'False'
+            ClickText          New
+            TypeText           Start IP Address            ${IP}
+            TypeText           End IP Address              ${IP}
+            TypeText           Description                 Australia
+            ClickText          Save
+            VerifyText         ${IP}
+        END
     END
 
     Log                    ${SingaporeIPs}
     FOR                    ${IP}                       IN                @{SingaporeIPs}
-        ClickText          New
-        TypeText           Start IP Address            ${IP}
-        TypeText           End IP Address              ${IP}
-        TypeText           Description                 Singapore
-        ClickText          Save
-        VerifyText         ${IP}
+        ${ip_already_configured}=                      IsText            ${IP}
+        IF                 '${ip_already_configured}' == 'False'
+            ClickText          New
+            TypeText           Start IP Address            ${IP}
+            TypeText           End IP Address              ${IP}
+            TypeText           Description                 Singapore
+            ClickText          Save
+            VerifyText         ${IP}
+        END
     END
 
     Log Screenshot
