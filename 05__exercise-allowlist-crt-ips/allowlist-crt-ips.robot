@@ -4,10 +4,23 @@ Suite Setup                Setup Browser
 Suite Teardown             Close All Browser Sessions
 
 *** Test Cases ***
+# When you've used mailinator for creating your SF trail org,
+#                         you run the full test in live testing
+#                         but make sure you have the mailinator_url variable set on robot level
 Exercise 5 - Allowlist IPs at Setup Network Access
     [tags]                 IPs
-    Login and Verify Code    
+    ${mailinator_needed}=              Run Keyword And Return Status                           Should Not Be Equal         ${None}         ${mailinator_url}
+    IF                         '${mailinator_needed}' == 'True'
+        Login and Verify Code
+    ELSE
+        Login                  ${username}                        ${password}
+        Home
+    END  
 
+
+    # When you've created your SF trial org with your own email addres, 
+    #                        run selection in live testing up to here
+    
     ClickText              Setup
     ClickText              Opens in a new tab
     SwitchWindow           NEW
