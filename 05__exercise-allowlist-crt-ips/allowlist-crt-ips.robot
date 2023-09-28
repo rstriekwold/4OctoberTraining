@@ -1,10 +1,7 @@
 *** Settings ***
-Library                         QWeb
-Library                         QForce
-Library                         String
-Library                         Collections
-Suite Setup                    Open Browser                about:blank                 chrome
-Suite Teardown                 Close All Browsers
+Resource                      ../resources/common.robot
+Suite Setup                Setup Browser
+Suite Teardown             Close All Browser Sessions
 
 *** Test Cases ***
 Exercise 5 - Allowlist IPs at Setup Network Access
