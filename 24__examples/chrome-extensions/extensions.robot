@@ -58,8 +58,8 @@ Pin All Extensions to the Menu
     Log to Console               ${result}          
 
     WHILE    '${result}'!='False'
-        QVision.Click Icon    puzzlegrey
         Sleep                 3s
+        QVision.Click Icon    puzzlegrey
         QVision.ClickIcon                        pin
         QVision.Click Icon    puzzlegrey
         ${result}=                   QVision.Is Icon                      pin
