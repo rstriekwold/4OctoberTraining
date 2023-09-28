@@ -1,8 +1,9 @@
 *** Settings ***
-Suite Setup                    Open Browser                about:blank                 chrome
+Resource                        ../resources/common.robot
+Suite Setup                     Setup Browser
 Test Setup                      Home
 Test Teardown                   Home
-Suite Teardown                 Close All Browsers
+Suite Teardown                  Close All Browser Sessions
 
 *** Test Cases ***
 Exercise 10 - Using Suite Setup, Test Setup, Test Teardown and Suite Teardown from Settings
@@ -67,22 +68,3 @@ Delete Lead
     ClickText                   Delete
     ClickText                   Close
     Log Screenshot
-
-
-*** Keywords ***
-
-Home
-    [Documentation]            Navigate to homepage, login if needed
-    GoTo                       ${home_url}
-    Log Screenshot
-    ${login_status} =          IsText                      To access this page, you have to log in to Salesforce.                     2
-    Run Keyword If             ${login_status}             Login
-    ClickText                  Home
-    VerifyTitle                Home | Salesforce
-
-Login
-    [Documentation]            Login to Salesforce instance
-    GoTo                       ${login_url}
-    TypeText                   Username                    ${username}                 delay=1
-    TypeText                   Password                    ${password}
-    ClickText                  Log In
