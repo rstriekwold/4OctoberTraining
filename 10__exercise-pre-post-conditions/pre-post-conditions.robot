@@ -1,9 +1,8 @@
 *** Settings ***
-Resource                        ../resources/common.robot
-Suite Setup                     Setup Browser
+Suite Setup                    Open Browser                about:blank                 chrome
 Test Setup                      Home
 Test Teardown                   Home
-Suite Teardown                  Close All Browser Sessions
+Suite Teardown                 Close All Browsers
 
 *** Test Cases ***
 Exercise 10 - Using Suite Setup, Test Setup, Test Teardown and Suite Teardown from Settings
