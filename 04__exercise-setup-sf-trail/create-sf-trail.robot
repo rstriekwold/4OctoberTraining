@@ -146,12 +146,12 @@ Exercise 4 - Do it for me! Login to the trail org to Verify Account if needed
 
 Exercise 5 - Allowlist IPs at Setup Network Access
     [tags]                 IPs
-    Login and Verify Code    
+    # Login and Verify Code    
 
     ClickText              Setup
     ClickText              Opens in a new tab
     SwitchWindow           NEW
-    VerifyText             Setup    anchor=Object Manager
+    VerifyText             Users    anchor=Administration
     TypeText               Quick Find   Network Access     tag=input                  anchor=Setup Home
     Verify Text            Network Access                  anchor=Security
     ClickText              Network Access
