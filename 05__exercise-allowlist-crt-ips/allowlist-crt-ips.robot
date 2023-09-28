@@ -88,6 +88,7 @@ Home
 
 Login
     [Documentation]             Login to Salesforce instance
+    [Arguments]                 ${username}=${username}    ${password}=${password}
     GoTo                        ${login_url}
     TypeText                    Username                    ${username}                 delay=1
     TypeText                    Password                    ${password}
