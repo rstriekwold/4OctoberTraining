@@ -70,6 +70,15 @@ Exercise 4 - Create Salesforce Trial Org
 
     ClickText                  Submit
 
+    #  Create robot variables with the login information from your mail and input
+    
+    # Example here:
+    # ${browser}                      chrome
+    # ${username}                     ea9mlm8la81a5l-pmcd@force.com
+    # ${login_url}                    https://energy-force-4969.my.salesforce.com                    # Salesforce instance. NOTE: Should be overwritten in CRT variables
+    # ${home_url}                     ${login_url}/lightning/page/home
+    # ${password}		                TrialSF01!
+
 Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
     Switch Window              1
     ${email_count}=            Get Text Count              Welcome to Salesforce
