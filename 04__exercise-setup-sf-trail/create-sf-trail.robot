@@ -213,11 +213,6 @@ Exercise 5 - Allowlist IPs at Setup Network Access
     END
 
     Log Screenshot
-    Log To Console             ${login_url}
-    Log To Console             ${home_url}
-    Log To Console             ${username}
-    Log To Console             ${password}
-    Log to Console             ${mailinator_url}
 
 *** Keywords ***
 
