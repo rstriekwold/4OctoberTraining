@@ -1,4 +1,5 @@
 test = {'emailAddress': 'test@test.com',
+        'somethingelse' : 'thisissomethingelse'
               }
 Acceptance = {'emailAddress' : 'acceptance@acceptance.com',
               }
