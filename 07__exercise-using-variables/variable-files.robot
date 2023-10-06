@@ -29,9 +29,9 @@ Exercise 7 - Variable Files Access Dynamic Variables
     Log   ${AREA2}
 
 Exercise 7 - Variable Files Use variable file with argument value dev
-    Import Variables	${CURDIR}/EnvVariables.py    test 
-    Log            ${emailAddress}
-    Log            ${somethingelse}
+    Import Variables	${CURDIR}/EnvVariables.py    ${environment}
+    Log To Console           ${emailAddress}
+    Log To Console          ${somethingelse}
  
     # ${the_var}=    Get Variable Value    ${extra}
     # IF    "${the_var}" != "None"
