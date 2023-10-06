@@ -1,14 +1,13 @@
-dev = {'scalar': 'Scalar variable',
-              'LIST__list': ['List','variable']}
-uat = {'scalar' : 'Some other value',
-              'LIST__list': ['Some','other','value'],
-              'extra': 'variables1 does not have this at all'}
+test = {'emailAddress': 'test@test.com',
+              }
+Acceptance = {'emailAddress' : 'acceptance@acceptance.com',
+              }
 
 def get_variables(env):
-    if env == 'dev':
-        return dev
-    elif env == 'uat':
-        return uat
+    if env == 'test':
+        return test
+    elif env == 'Acceptance':
+        return Acceptance
     else:
         # default variables
-        return uat
+        return test
