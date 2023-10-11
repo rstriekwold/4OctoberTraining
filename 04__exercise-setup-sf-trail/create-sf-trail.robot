@@ -1,5 +1,5 @@
 *** Settings ***
-#This is a repo test
+#This is a test for sharing a code base
 Documentation                   Create a new Salesforce Trail
 Library                         QWeb
 Library                         DateTime
