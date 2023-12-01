@@ -1,5 +1,5 @@
 *** Settings ***
-#THIS is the same code for an example to show duplicate code
+#this is a change to see the shared repo
 Library                         QWeb
 Library                         QForce
 Library                         String
