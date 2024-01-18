@@ -2,7 +2,7 @@
 Library               QWeb
 Suite Setup           Open Browser    about:blank    chrome
 Suite Teardown        CloseAllBrowsers
-#this is a check so we dont have to duplicate code back to test 
+#this is a codebase
 
 *** Test Cases ***
 Exercise 2 - Consulting Libraries
