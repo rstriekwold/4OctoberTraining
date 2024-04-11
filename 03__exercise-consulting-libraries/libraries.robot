@@ -2,7 +2,7 @@
 Library               QWeb
 Suite Setup           Open Browser    about:blank    chrome
 Suite Teardown        CloseAllBrowsers
-#this is a codebase
+#this is the codebase which we opened from the Test environment robot 11-04
 
 *** Test Cases ***
 Exercise 2 - Consulting Libraries
