@@ -1,12 +1,12 @@
 *** Settings ***
 Variables    PythonVariables.py
 Variables    YamlVariables.yaml
-Variables    DynamicVariables.py
+Variables    DDynamicVariables.py
 
 *** Test Cases ***
 Exercise 7 - Variable Files Access Python Variables
     Log   ${TestEnv.ip}
-    Log    ${TestEnv.roles}
+    Log    ${TestEnv.roles}SS
     Log Many   @{TestEnv.roles}
     Log    ${my_var}
     Log Many   @{my_list}
