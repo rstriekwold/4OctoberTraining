@@ -2,7 +2,7 @@
 Library               QWeb
 Suite Setup           Open Browser    about:blank    chrome
 Suite Teardown        CloseAllBrowsers
-#THIS CHANGE IS DONE ON THE 4th of June
+#THIS CHANGE IS DONE ON THE 4th of Junes
 
 *** Test Cases ***
 Exercise 2 - Consulting Libraries
